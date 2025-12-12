@@ -13,9 +13,8 @@ COPY . .
 # Asegúrate de que el script mvnw sea ejecutable (es un paso clave)
 RUN chmod +x mvnw
 
-# Ejecuta el build de Maven. Esto genera el JAR en /app/target/
-# Se omite la ejecución de tests con -DskipTests
-RUN ./mvnw clean package -DskipTests && ./mvnw spring-boot:repackage -DskipTests
+# Solo ejecuta el build de Maven, el plugin de Spring Boot ya genera el JAR ejecutable
+RUN ./mvnw clean package -DskipTests
 
 # --------------------
 # 2. RUNNING STAGE (Ejecutar la aplicación)
