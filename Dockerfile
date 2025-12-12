@@ -26,7 +26,7 @@ RUN ./mvnw clean package -DskipTests
 FROM eclipse-temurin:17-jre-jammy
 
 # Copia el JAR generado en la etapa 'build'
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target/admin-panel-backend.jar app.jar
 
 # Define el puerto de la aplicación (por defecto Spring Boot)
 EXPOSE 8080
