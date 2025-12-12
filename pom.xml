@@ -118,9 +118,9 @@
             <artifactId>spring-boot-maven-plugin</artifactId>
             <version>${spring.boot.version}</version>
             <configuration>
-                <mainClass>com.danielgofu.adminpanelbackend.AdminPanelBackendApplication</mainClass>
+                <mainClass>com.danielgofu.adminpanel.AdminPanelBackendApplication</mainClass>
             </configuration>
-            </plugin>
+        </plugin>
         
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
